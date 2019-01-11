@@ -16,11 +16,10 @@ class PhoneForm extends Component {
         e.preventDefault();
         this.props.onCreate(this.state);
         this.setState({
-        name: '',
-        phone: '',
-    })
-}
-    
+            name: '',
+            phone: '',
+        })
+    }
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
@@ -35,7 +34,11 @@ class PhoneForm extends Component {
                     onChange={this.handleChange}
                     value={this.state.phone} />
                 <button type="submit">버튼</button>
-                <button type="slice">삭제</button>
+                <div>
+                    {this.state.name}
+                    {this.state.phone}
+
+                </div>
             </form>
         );
     }
